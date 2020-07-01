@@ -1,0 +1,7 @@
+name: PWA Push
+description: 'Provide push notification for PWA.'
+type: module
+core_version_requirement: ^8.8 || ^9
+php: 7.2
+dependencies:
+  - pwa:pwa
