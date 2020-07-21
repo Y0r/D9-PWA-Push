@@ -1,19 +1,24 @@
+pwa_push.admin_index:
+  title: 'PWA Push'
+  base_route: pwa.admin_index
+  route_name: pwa_push.admin_index
+
 pwa_push.config:
   title: 'Push Config'
-  base_route: pwa.config
+  base_route: pwa_push.admin_index
   route_name: pwa_push.config
 
-pwa_push.config.subscription:
+pwa_push.subscription_settings:
   title: 'Push Content Settings'
-  base_route: pwa.config
-  route_name: pwa_push.config.subscription
-
-pwa_push.config.broadcast:
-  title: 'Broadcast Push'
-  base_route: pwa.config
-  route_name: pwa_push.config.broadcast
+  base_route: pwa_push.admin_index
+  route_name: pwa_push.subscription_settings
 
 pwa_push.subscription_list:
   title: 'Subscription List'
-  base_route: pwa.config
+  base_route: pwa_push.admin_index
   route_name: pwa_push.subscription_list
+
+pwa_push.broadcast_push:
+  title: 'Broadcast'
+  base_route: pwa_push.admin_index
+  route_name: pwa_push.broadcast_push

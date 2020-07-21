@@ -1,5 +1,13 @@
+pwa_push.admin_index:
+  path: '/admin/config/pwa-push'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'PWA Push'
+  requirements:
+    _permission: 'access administration pages'
+
 pwa_push.config:
-  path: '/admin/config/pwa/push-config'
+  path: '/admin/config/pwa-push/push-config'
   defaults:
     _form: '\Drupal\pwa_push\Form\PwaPushForm'
     _title: 'Push Notification Configuration'
@@ -8,8 +16,8 @@ pwa_push.config:
   options:
     _admin_route: TRUE
 
-pwa_push.config.subscription:
-  path: '/admin/config/pwa/subscription-config'
+pwa_push.subscription_settings:
+  path: '/admin/config/pwa-push/subscription-settings'
   defaults:
     _form: '\Drupal\pwa_push\Form\PwaPushSubscriptionForm'
     _title: 'Push Notification Content'
@@ -19,7 +27,7 @@ pwa_push.config.subscription:
     _admin_route: TRUE
 
 pwa_push.subscription_list:
-  path: '/admin/config/pwa/subscription-list'
+  path: '/admin/config/pwa-push/subscription-list'
   defaults:
     _controller: '\Drupal\pwa_push\Controller\PwaPushController::subscriptionList'
     _title: 'Push Notification Subscription List'
@@ -28,8 +36,8 @@ pwa_push.subscription_list:
   options:
     _admin_route: TRUE
 
-pwa_push.config.broadcast:
-  path: '/admin/config/pwa/broadcast-config'
+pwa_push.broadcast_push:
+  path: '/admin/config/pwa-push/broadcast'
   defaults:
     _form: '\Drupal\pwa_push\Form\PwaPushBroadcastForm'
     _title: 'Broadcast Push Notification'
