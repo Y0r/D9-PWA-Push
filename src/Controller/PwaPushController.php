@@ -130,15 +130,18 @@ class PwaPushController extends ControllerBase {
         ],
       ];
     }
+    
     if (empty($rows)) {
       $markup = $this->t('No record found.');
     }
     else {
       $markup = $this->t('List of All Subscribed Users.');
     }
+    
     $build = [
       '#markup' => $markup,
     ];
+    
     // Generate the table.
     $build['config_table'] = [
       '#theme' => 'table',
