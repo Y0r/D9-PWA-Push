@@ -84,15 +84,6 @@ class PwaPushForm extends ConfigFormBase {
       '#description' => $this->t('Disabling the push notifications will ensure that no user will be able to receive push notifications'),
     ];
 
-    $form['gcm_key'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('GCM Key'),
-      '#description' => $this->t('Google Cloud Messaging (GCM) key'),
-      '#maxlength' => 50,
-      '#size' => 50,
-      '#default_value' => $config->get('gcm_key'),
-    ];
-
     $form['public_key'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Public Key'),
@@ -195,7 +186,6 @@ class PwaPushForm extends ConfigFormBase {
     }
 
     $this->config('pwa_push.pwa_push')
-      ->set('gcm_key', trim($form_state->getValue('gcm_key')))
       ->set('public_key', trim($form_state->getValue('public_key')))
       ->set('private_key', trim($form_state->getValue('private_key')))
       ->set('icon_path', $form_state->getValue('icon_path'))
