@@ -1,5 +1,8 @@
 /**
- * Chat messages, emails, document updates, settings changes, photo uploads… anything that you want to reach the server even if user navigates away or closes the tab.
+ * Chat messages, emails, document updates,
+ * settings changes, photo uploads… anything
+ * that you want to reach the server even if
+ * user navigates away or closes the tab.
  */
 
 self.addEventListener('push', function (event) {
